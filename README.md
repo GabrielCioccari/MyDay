@@ -10,8 +10,8 @@
 
 <h2 id="layout">🎨 Layout</h2>
 <p align="center">
-    <img src="https://github.com/user-attachments/assets/bcb01bf2-8958-482d-a0b5-91ea29124665" alt="Image Example" width="400px">
-    <img src="https://github.com/user-attachments/assets/4d276693-cff6-4c95-ac2b-2e0ae856ff9b" alt="Image Example" width="400px">
+    <img src="https://github.com/user-attachments/assets/1d4cb474-4256-4f5d-bd62-0ecc7dc23c5b" alt="Image Example" width="400px">
+    <img src="https://github.com/user-attachments/assets/0cb156d2-ed4e-4c58-a102-1832acc884dd" alt="Image Example" width="400px">
 </p>
 
 <h2 id="technologies">💻 Tecnologias</h2>
