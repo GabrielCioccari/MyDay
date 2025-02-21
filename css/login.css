@@ -1,0 +1,142 @@
+:root{
+    --Preto: #202020;
+    --Branco: #ffffff;
+    --Amarelo: #FECC16;
+    --Azul: #00A6FB;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    padding: 50px;
+    overflow: hidden;
+    font-family: "Poppins", serif;  
+}
+
+.logo img{
+    height: 70px; 
+    position: fixed;  
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+}
+
+input{
+    margin-top: -1rem;
+    border-radius: 10px;
+    height: 40px;
+    width: 500px;
+    padding: 10px;
+    font-size: 1.2rem;
+    border: 1px solid #202020;
+    margin-bottom: -1rem;
+}
+
+h2{
+    font-size: 3rem;
+    color: var(--Preto);
+}
+
+main p{
+    margin-top: -1rem;
+    font-size: 1.3rem;
+    color: var(#202020);
+    margin-bottom: 3rem;
+}
+
+.btnAmarelo{
+    background-color: var(--Amarelo);
+    color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    height: 45px;
+    width: 100%;
+    border-bottom: 4px solid #202020;
+    transition: opacity 0.8s ease, transform 0.1s ease;
+    font-size: 1.1rem;
+}
+
+.btnAmarelo:hover{
+    transform: scale(1.1);
+}
+
+.separator{
+    height: 1px;
+    width: 100%;
+    background-color: var(--Amarelo);
+    margin-bottom: 1.5rem;
+}
+
+.google{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    border-bottom: 4px solid #202020;; 
+    gap: 1rem;
+    width: 100%;
+    height: 45px;
+    margin-bottom: 2rem;
+    text-decoration: none;
+    color: var(--Preto);
+    transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.google:hover{
+    transform: scale(1.1);
+}
+
+.google img{
+    height: 30px;
+}
+
+.poscont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.perg {
+    display: flex;
+    align-items: center;
+    flex-direction: center;
+    justify-content: space-between;
+    gap: 2rem;
+    margin-bottom: -1.5rem;
+
+}
+
+.perg p{
+    font-size: 1.2rem;
+    margin-top: 0rem;
+}
+
+.perg a{
+    margin-top: -3rem;
+    text-decoration: none;
+    color: var(--Azul);
+    font-size: 1.1rem;
+}
+
+.msg{
+    font-size: 1.1rem;
+    color: red;
+}
+

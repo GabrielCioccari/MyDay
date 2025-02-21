@@ -1,0 +1,192 @@
+.modalconfig {
+    display: none;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escurecido */
+  }
+
+.modal-contentconfig{
+    background-color: #fff;
+    border: 1px solid #202020;
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    max-width: 1100px;  /* Largura máxima */
+    border-radius: 15px;
+    display: flex;
+    flex-direction: center;
+    justify-content: flex-start;
+
+}
+
+.sidebar {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    left: 0;
+    width: 200px;
+    border-top-left-radius: 15px ;
+    border-bottom-left-radius: 15px ;
+    padding: 20px;
+    background-color: #f5f5f5;
+}
+
+.nav-btn {
+    display: block;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 20px;
+    color: #202020;
+    transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.nav-btn:hover {
+    transform: scale(1.04);
+}
+
+/* Estilo geral do conteúdo */
+#content {
+    flex-grow: 1;
+    width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    padding: 10px;
+}
+
+/* Seção "Meu Perfil" */
+#perfilSection {
+    max-width: 800px; /* Limita a largura máxima para melhor visualização */
+    text-align: left; /* Alinha o texto à esquerda */
+    overflow-y: auto;
+    height: 95%;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Estilo dos campos de formulário */
+form {
+    display: flex;
+    flex-direction: column; /* Alinha os campos verticalmente */
+    gap: 15px; /* Espaçamento entre os campos */
+}
+
+/* Estilo dos rótulos (labels) */
+form label {
+    font-weight: 500;
+    margin-bottom: -7px;
+}
+
+/* Campos de entrada (input) */
+form input[type="text"],
+form input[type="email"],
+form input[type="password"] {
+    width: 70%; /* Ocupa toda a largura disponível */
+    padding: 10px;
+    border: 1px solid #202020;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+}
+
+/* Botão Salvar */
+form button#salvar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #202020;
+    background-color: #FECC16;
+    transition: opacity 0.8s ease, transform 0.1s ease;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+  }
+  
+  form button#salvar:hover{
+    transform: scale(1.07);
+  }
+
+.profile-image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+    margin-left: 0rem;
+}
+
+.profile-placeholder {
+    background-color: #707070;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 4rem;
+    color: white;
+    font-weight: bold;
+}
+
+.profile-image-container img{
+    border: 1px solid #202020;
+}
+
+.profile-image-container img,
+.profile-placeholder {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.delete-photo-btn {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: none;
+    border: none;
+    color: black;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    background-color: #F3F3F3;
+}
+
+.edit-icon {
+    position: absolute;
+    top: 21%;
+    left: 21%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 24px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.profile-image-container:hover img {
+    filter: brightness(70%);
+}
+
+.profile-image-container:hover .edit-icon {
+    opacity: 1;
+}
+
+.profile-placeholder:hover .edit-icon {
+    opacity: 1;
+}
+
+

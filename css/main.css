@@ -1,0 +1,272 @@
+body {
+  background-color: #ffffff;
+}
+
+body.escuro {
+  background-color: #191919;
+}
+
+body, html{
+  scroll-behavior: smooth;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", serif;  
+}
+
+textarea{
+  font-family: "Poppins", serif;  
+}
+
+.modal-content {
+  background-color: #fff;
+  border: 1px solid #202020;
+  width: 100%;
+  max-width: 800px;  /* Largura máxima */
+  border-radius: 15px;
+  position: relative;  /* Necessário para garantir que o conteúdo esteja bem posicionado */
+}
+
+header button{
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: opacity 0.8s ease, transform 0.1s ease;
+  width: 100%;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  padding-left: 20px;
+  gap: 20px;
+  font-size: 18px;
+}
+
+.nomeefoto{
+  display: flex;
+  flex-direction: center; 
+}
+
+header button img{
+  height: 25px;
+  width: 25px;
+}
+
+.selecionado:hover{
+  transform: scale(1.05);
+}
+
+.selecionado.selected {
+  border: 1px solid #202020;
+  background-color: #ffffff;
+}
+
+.selecionado.selected.escuro {
+  border: 1px solid #f5f5f5;
+  background-color: #202020;
+}
+
+header{
+  position: fixed;  
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 17%;
+  background-color: #F5F5F5;
+  padding: 10px;
+  z-index: 2;
+}
+
+header.escuro{
+  background-color: #212121;
+}
+
+.header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.btnPesq:hover{
+  transform: scale(1.07);
+}
+
+.btnconfig:hover{
+  transform: scale(1.07);
+}
+
+.btnPag{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #202020;
+  background-color: #FECC16;
+  transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.btnPag:hover{
+  transform: scale(1.07);
+}
+
+.user{
+  display: flex;
+  align-items: center;
+  flex-direction: center;
+  gap: 1rem;
+  width: 90%;
+  margin-top: 10px;
+}
+
+.user img{
+  height: 60px;
+  width: 60px;
+  border: 1px solid #202020;
+  border-radius: 10px;
+}
+
+.user img.escuro{
+  border: 1px solid #f5f5f5;
+}
+
+.user h3{
+  font-size: 22px;
+  width: 80%;
+  max-height: 100%;
+  font-weight: 700;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  margin: 0;
+  padding: 0;
+}
+
+.separator{
+  height: 1px;
+  width: 90%;
+  background-color: #FECC16;
+  margin-bottom: 20px;
+}
+
+.primeiraLetra{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 55px;
+  width: 55px;
+  background-color: #707070;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+.primeiraLetra.escuro{
+  background-color: #f5f5f5;
+  color: #202020;
+}
+
+.projetos{
+display: flex;
+width: 90%;
+flex-direction: column;
+}
+
+.projetos h2{
+  font-size: 22px;
+  font-weight: bold;
+  color: #707070;
+}
+
+.projetos h2.escuro{
+  color: #f5f5f5;
+}
+
+#lista_paginas{
+  display: flex;
+  width: 310px;
+  flex-direction: column;
+  overflow-y: auto;
+  max-height: 200px;
+  list-style: none;
+  list-style-type: none;
+  min-height: 200px;
+  padding: 5px;
+  margin-left: -10px;
+  margin-top: -5px;
+} 
+
+#lista_paginas img{
+  height: 20px;
+  width: 20px;
+}
+
+#lista_paginas li{
+  list-style: none;
+  width: 200px;
+  margin-bottom: 1rem;
+}
+
+.filhas a {
+  white-space: nowrap; /* Impede a quebra de linha nas páginas filhas */
+  text-overflow: ellipsis; /* Adiciona os três pontinhos se o texto for grande */
+  overflow: hidden; /* Garante que o texto que ultrapassar o limite não seja exibido */
+  font-size: 16px; /* Ajuste o tamanho da fonte das páginas filhas */
+}
+
+#lista_paginas a{
+  color: #202020;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 8px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 240px;
+  overflow: hidden;
+  font-size: 16px;
+  transition: opacity 0.8s ease, transform 0.1s ease;
+  margin-left: -2rem;
+  padding: 5px;
+}
+
+.btnpaglugar{
+  width: 90%;
+  margin-top: 45%;
+}
+
+/* Estilizando o próprio scroll */
+::-webkit-scrollbar {
+  width: 9px;
+  height: 6px;
+}
+
+/* Scrollbar horizontal (embaixo) */
+::-webkit-scrollbar:horizontal {
+  height: 9px; /* Ajuste conforme desejado */
+}
+
+
+/* Estilizando a parte que faz a rolagem (o "polegar" do scroll) */
+::-webkit-scrollbar-thumb {
+  background-color: #FECC16;
+  border-radius: 10px;
+  border: 1px solid #202020;
+}
+
+/* Estilizando a parte de fundo do scroll */
+::-webkit-scrollbar-track {
+  background-color: #F0F0F0;
+  border-radius: 10px;
+}
+
+/* Estilizando o hover no "polegar" do scroll */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #d4a700;
+}
+
+
+
+
+
+

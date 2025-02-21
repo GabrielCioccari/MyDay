@@ -1,0 +1,712 @@
+:root{
+    --Preto: #202020;
+    --Branco: #ffffff;
+    --Amarelo: #FECC16;
+    --Azul: #00A6FB;
+}
+
+body, html{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", serif;  
+    overflow-x: hidden;  
+}
+
+/* AQUI FICA O HEADER */
+header {
+    z-index: 3;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.center{
+    display: flex;
+    flex-direction: center;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+}
+
+nav{
+    margin-top: -5rem;
+    background-color: #ffffff;
+    border-radius: 50px;
+    border: 1px solid #202020;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: center;
+    padding: 0 40px;
+    width: 1190px;
+    height: 90px;
+}
+
+ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: center;
+    gap: 1rem;
+}
+
+.logo img {
+    height: 70px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.entrar{
+    color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    height: 45px;
+    width: 100px;
+    border-bottom: 4px solid #202020;; 
+    transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.entrar:hover{
+    transform: scale(1.1);
+}
+
+.cadastrarPreto{
+    background-color: var(--Preto);
+    color: var(--Branco);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    height: 45px;
+    width: 250px;
+    border-bottom: 4px solid #202020;
+    transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.cadastrarPreto:hover{
+    transform: scale(1.1);
+}
+
+/* AQUI FICA A MAIN */
+
+main {
+    gap: 3rem;
+    position: relative;
+    width: 100%;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.background-video-main {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.introimg img{
+    height: 470px;
+    width: auto;
+}
+
+.introtext{
+    width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: -2rem;
+}
+
+.introtext h1{
+    color: var(--Branco);
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: -1rem;
+}
+
+.introtext p{
+    color: var(--Branco);
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.funcimg img{
+    height: 430px;
+    width: auto;
+}
+
+.cadastrarAmarelo{
+    background-color: var(--Amarelo);
+    color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    height: 45px;
+    width: 250px;
+    border-bottom: 4px solid #202020;
+    transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.cadastrarAmarelo:hover{
+    transform: scale(1.1);
+}
+
+/* AQUI FICA A SECTION FUNCIONALIDADES */
+
+.funcionalidades{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.contfunc{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: center;
+    margin-top: 5rem;
+    width: 60%;
+}
+
+.functext{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.functext h2{
+    color: var(--Preto);
+    font-size: 70px;
+    font-weight: 600;
+    width: 600px;
+    margin-bottom: -1rem;
+}
+
+.functext span{
+    color: var(--Amarelo);
+}
+
+.functext p{
+    color: var(--Preto);
+    font-size: 30px;
+    font-weight: 300;
+    width: 600px;
+}
+
+.image-container {
+    position: relative;
+    width: 1200px;
+    height: 670px;
+    overflow: hidden;
+    border-radius: 50px;
+    border: 1px solid #202020;
+    box-shadow: 4px 4px 4px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.image-container img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.2s ease, transform 0.2s ease;
+    /* transform: scale(1.1); ir para frente */
+}
+
+.image-container img.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+button {
+    margin: 10px;
+    color: var(--Preto);
+    border-radius: 10px;
+    background-color: var(--Branco);
+    border: 1px solid #202020;
+    height: 45px;
+    width: 100px;
+    border-bottom: 4px solid #202020;; 
+    cursor: pointer;
+    transition: opacity 0.8s ease, transform 0.1s ease;
+    margin-bottom: 5rem;
+}
+
+button:not(.active-btn):hover {
+    transform: scale(1.1);
+}
+
+button.active-btn {
+    background-color: var(--Amarelo);
+    color: var(--Preto  );
+    transform: scale(1.2);
+}
+
+/* AQUI FICA A SECTION BENEFICIOS */
+
+.beneficios {
+    height: 500px;
+    max-height: 500px;
+    background-color: var(--Amarelo);
+    border: 1px solid #202020;
+    padding: 20px;
+    position: relative;
+
+}
+
+.contbene {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.benetext {
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.benetext h2 {
+    color: var(--Preto);
+    font-size: 70px;
+    font-weight: 600;
+    margin-bottom: -1rem;
+    transform: translateY(-60px); /* Move o título para cima */
+}
+
+.benetext span{
+    color: var(--Azul);
+}
+
+.benetext p {
+    transform: translateY(-50px); /* Move o título para cima */
+    color: var(--Preto);
+    font-size: 30px;
+    font-weight: 300;
+}
+
+.carousel-container {
+    position: relative;
+    width: 40%;
+    height: 100%;
+    padding: 50px;
+}
+
+#slide {
+    width: 100%;
+    margin-top: 50px;
+}
+
+.item {
+    border: 1px solid #202020;
+    border-radius: 50px;
+    background-color: var(--Branco);
+    width: 370px;
+    height: 260px;
+    background-position: 50% 50%;
+    display: inline-block;
+    transition: 1s;
+    background-size: 200%;
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.item h2{
+    font-weight: 500;
+    font-size: 2rem;
+    text-align: center;
+}
+.item p{
+    font-weight: 300;
+    font-size: 1rem;
+    text-align: center;
+}
+
+
+.item:nth-child(1) {
+    transform: translate(-150%);
+    background-position: 0% 50%;
+    opacity: 0;
+}
+
+.item:nth-child(2) {
+    transform: translate(-40%);
+    background-position: 20% 50%;
+}
+
+.item:nth-child(3) {
+    transform: translate(70%);
+    background-position: 50% 50%;
+}
+
+.item:nth-child(4) {
+    transform: translate(180%);
+    background-position: 80% 50%;
+}
+
+.item:nth-child(n+5) {
+    transform: translate(290%);
+    background-position: 100% 50%;
+    opacity: 0;
+}
+
+.item .content .name {
+    font-family: 'Anton', sans-serif;
+}
+
+.item:hover .content {
+    max-height: 100px;
+}
+
+.item:hover {
+    background-size: 250%;
+}
+
+.beneficios .buttons {
+    position: absolute;
+    bottom: 30px;
+    left: 0;
+    text-align: center;
+    width: 100%;
+}
+
+.beneficios .buttons button {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 1px solid var(--Preto);
+    transition: 0.5s;
+    background-color: var(--Branco);
+    color: var(--Preto);
+    font-size: 1.3rem;
+}
+
+/* AQUI FICA A SECTION HISTORIA */
+
+.historia{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5rem;
+}
+
+.conthist{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: center;
+    width: 60%;
+}
+
+.histtext{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.histtext h2{
+    color: var(--Preto);
+    font-size: 70px;
+    font-weight: 600;
+    width: 830px;
+    margin-bottom: -1rem;
+}
+
+.histtext span{
+    color: var(--Amarelo);
+}
+
+.histtext p{
+    color: var(--Preto);
+    font-size: 30px;
+    font-weight: 300;
+    width: 600px;
+}
+
+.histimg img{
+    height: 500px;
+    width: auto;
+}
+
+.instagram{
+    color: var(--Preto);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    border: 1px solid #202020;
+    height: 45px;
+    width: 300px;
+    border-bottom: 4px solid #202020;; 
+    transition: opacity 0.8s ease, transform 0.1s ease;
+}
+
+.instagram:hover{
+    transform: scale(1.1);
+}
+
+/* AQUI FICA A SECTION FAQS */
+
+.peres{
+    margin-top: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    gap: 3rem;
+}
+
+.separator{
+    height: 1px;
+    background-color: var(--Amarelo);
+}
+
+.email{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.email h2{
+    color: var(--Preto);
+    font-size: 70px;
+    font-weight: 600;
+    width: 600px;
+    margin-bottom: -1rem;
+}
+
+.email p{
+    color: var(--Preto);
+    font-size: 30px;
+    font-weight: 300;
+    width: 600px;
+}
+
+.formcont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 500px; 
+    overflow: hidden;
+    width: auto;
+}
+
+input{
+    border-radius: 20px;
+    border: 1px solid var(--Preto);
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 600px;
+    height: 40px;
+    padding: 10px;
+}
+
+textarea{
+    border-radius: 20px;
+    border: 1px solid var(--Preto);
+    font-weight: 300;
+    font-size: 1.2rem;
+    width: 600px;
+    height: 200px;
+    padding: 10px;
+    resize: none;
+}
+/* 
+textarea:focus,
+  input[type="email"]:focus{
+    border-color: var(--Amarelo);
+    outline: none;
+  } */
+
+.formbtn{
+    margin-top: -3rem;
+    margin-left: 83%;
+}
+
+.spinner {
+    border: 4px solid var(--Amarelo);
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border-left-color: var(--Preto);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+
+  #success-message {
+    top: 0;
+    border: 1px solid #202020;
+    background-color: var(--Branco);
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+    display:none;
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+
+.faqs{
+    display: flex;
+    flex-direction: column;
+    width: 25%;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+}
+
+.faq-question {
+    cursor: pointer;
+    padding: 10px;
+    background-color: transparent;
+    border: none;
+    color: #333;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.faq-question:hover {
+    color: var(--Azul);
+}
+
+.faq-answer {
+    display: none;
+    padding: 10px;
+    color: #555;
+}
+
+/* AQUI FICA O FOOTER */
+
+footer {
+    position: relative;
+    z-index: 1;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    height: 50vh;
+    flex: 1;
+}
+
+.background-video-footer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.fotcont{
+    background-color: var(--Branco);
+    width: 60%;
+    height: 90%;
+    margin-top: 4rem;
+    padding: 80px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: center;
+    justify-content: space-between;
+}
+
+.fotlogo{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+.fotlogo p{
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.fotnav{
+    display: flex;
+    width: 40%;
+    display: flex;
+    justify-content: flex-start;
+    gap: 2rem;
+    margin-top: -2rem;
+}
+
+.fotnav ul{
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.fotnav h3{
+    text-decoration: none;
+    color: var(--Preto);
+    font-size: 1.4rem;
+}
+
+.fotnav a{
+    text-decoration: none;
+    color: var(--Preto);
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+footer .separator{
+    height: 1px;
+    background-color: var(--Amarelo);
+    width: 95%;
+}
+
+
+@media (max-width: 600px) {
+    body {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media (min-width: 601px) and (max-width: 1024px) {
+    body {
+      font-size: 3rem;
+    }
+  }
+  
+  @media (min-width: 1025px) {
+    body {
+
+    }
+  }
