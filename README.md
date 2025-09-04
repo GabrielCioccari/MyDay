@@ -21,3 +21,4 @@
 - CSS
 - JS
 - FIGMA
+- MySQL
